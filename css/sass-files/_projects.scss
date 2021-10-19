@@ -1,0 +1,180 @@
+@import './mixins';
+
+#main {
+  #projects {
+    margin: 0px;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    @include flex(column, center, center);
+    .title {
+      margin: 0px;
+      padding: 0px;
+    }
+    .project {
+      @include flex(column, center, center);
+      margin-top: 10px;
+      .projectImg {
+        width: 90%;
+        border-radius: 10px;
+      }
+      .projectDescription {
+        @include flex(column, center, center);
+        .projectSummary {
+          height: 250px;
+          width: 90%;
+          margin-top: 15px;
+          padding: 10px;
+          border-radius: 4px;
+          background-color: $lightColor2;
+          color: $lightColor5;
+          box-shadow: 2px 2px 1px 1px $lightColor3;
+          @include flex(column, center, center);
+          span {
+            font-weight: bolder;
+            font-size: 1.2em;
+          }
+          p {
+            font-weight: bold;
+            width: 80%;
+          }
+          .builtWithImgs {
+            img {
+              margin: 10px 0px;
+              width: 30px;
+            }
+          }
+        }
+        .projectLinks {
+          margin-top: 20px;
+          @include flex(row, space-around, center);
+          width: 80%;
+          .liveCode {
+            background-color: $lightColor5;
+            color: $lightColor1;
+            border-radius: 5px;
+            padding: 10px;
+            height: 40px;
+            font-size: 1.25em;
+            @include flex(column, center, center);
+            &:hover {
+              background-color: $lightColor4;
+              color: $lightColor1;
+            }
+          }
+          .linkImg {
+            width: 60px;
+          }
+        }
+      }
+    }
+    #movieScoop {
+      background-color: $lightColor5;
+      color: $lightColor1;
+      .projectSummary {
+        background-color: $lightColor1;
+        color: $lightColor5;
+        box-shadow: 2px 2px 1px 1px $lightColor2;
+      }
+      .projectLinks {
+        .liveCode {
+          background-color: $lightColor1;
+          color: $lightColor5;
+          &:hover {
+            background-color: $lightColor4;
+            color: $lightColor1;
+          }
+        }
+      }
+    }
+  }
+}
+
+// small tablets
+@media (min-width: 481px) {
+}
+
+// portrait tablets
+@media (min-width: 641px) {
+  #main {
+    #projects {
+      grid-column: 1 / 3;
+      .project {
+        .projectDescription {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          .projectSummary {
+            justify-self: center;
+            height: 320px;
+          }
+          .projectLinks {
+            justify-self: center;
+          }
+        }
+      }
+      #movieScoop {
+        .projectDescription {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr) 100px;
+          .projectSummary {
+            justify-self: center;
+            height: 285px;
+          }
+          .projectLinks {
+            grid-column: 1 / 3;
+            grid-row: 3 / 4;
+            justify-self: center;
+            // margin-top: 30px;
+          }
+        }
+      }
+      #gifactory {
+        .projectDescription {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr) 100px;
+          .projectSummary {
+            justify-self: center;
+            height: 285px;
+          }
+          .projectLinks {
+            grid-column: 1 / 3;
+            grid-row: 3 / 4;
+            justify-self: center;
+            // margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// landscape tablets
+@media (min-width: 961px) {
+}
+
+// laptops
+@media (min-width: 1025px) {
+  #main {
+    #projects {
+      grid-column: 1 / 3;
+      .project {
+        .projectDescription {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          .projectSummary {
+            p {
+              font-size: 1.2em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// high res laptops and desktops
+@media (min-width: 1281px) {
+}

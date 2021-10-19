@@ -1,0 +1,113 @@
+@import './mixins';
+
+#main {
+  #landing {
+    // background-color: $lightColor3;
+    margin: 0px;
+    padding-top: 100px;
+    grid-column: 1 / 2;
+    grid-row: 1 /2;
+    @include flex(column, center, center);
+    #personalInfo {
+      width: 90%;
+      height: 200px;
+      @include flex(row, center, center);
+      .title {
+        width: 100px;
+        margin: 0px 70px 0px 0px;
+        padding: 0px;
+        @include flex(column, center, center);
+      }
+      #photo {
+        background: url('../../images/ab.jpeg') no-repeat;
+        background-position: top;
+        background-size: cover;
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+      }
+    }
+    #contactInfo {
+      width: 80%;
+      @include flex(row, space-around, flex-start);
+      .contacts {
+        img {
+          height: 40px;
+          margin: 0px 15px;
+        }
+      }
+      #resume {
+        background-color: $lightColor5;
+        color: $lightColor1;
+        border-radius: 5px;
+        padding: 10px;
+        height: 40px;
+        @include flex(column, center, center);
+        &:hover {
+          background-color: $lightColor4;
+          color: $lightColor1;
+        }
+        h2 {
+          margin: 0px 15px;
+        }
+      }
+    }
+    #about {
+      width: 90%;
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: $lightColor2;
+      color: $lightColor5;
+      box-shadow: 2px 2px 1px 1px $lightColor3;
+      @include flex(column, center, center);
+      span {
+        margin: 10px 0px;
+        font-size: 1.5em;
+        font-weight: 1000;
+      }
+      p {
+        width: 80%;
+        font-size: 1em;
+        font-weight: bolder;
+      }
+    }
+  }
+}
+// small tablets
+@media (min-width: 481px) {
+}
+
+// portrait tablets
+@media (min-width: 641px) {
+  #main {
+    #landing {
+      grid-column: 1 / 3;
+      #about {
+        width: 70%;
+      }
+    }
+  }
+}
+
+// landscape tablets
+@media (min-width: 961px) {
+}
+
+// laptops
+@media (min-width: 1025px) {
+  #main {
+    #landing {
+      #about {
+        width: 60%;
+        p {
+          font-size: 1.25em;
+        }
+      }
+    }
+  }
+}
+
+// high res laptops and desktops
+@media (min-width: 1281px) {
+}

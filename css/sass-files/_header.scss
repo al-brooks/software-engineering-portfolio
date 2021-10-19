@@ -1,0 +1,28 @@
+@import './mixins';
+
+header {
+  margin-top: -50px;
+  @include flex(row, center, center);
+  #navBar {
+    position: fixed;
+    top: 10px;
+    width: 90%;
+    background-color: transparent;
+    @include flex(row, space-between, center);
+    button {
+      &:hover {
+        cursor: pointer;
+        background-color: $lightColor4;
+        color: $lightColor1;
+      }
+      color: $lightColor4;
+      text-align: center;
+      width: 100px;
+      margin-bottom: 7px;
+      font-size: 1em;
+      font-weight: 800;
+      line-height: 2em;
+      border-radius: 3px;
+    }
+  }
+}

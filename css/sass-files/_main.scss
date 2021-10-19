@@ -1,0 +1,41 @@
+@import './mixins';
+
+#main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 600px) 1fr;
+  section {
+    padding: 30px 0px;
+    margin-bottom: 10px;
+    .title {
+      padding-top: 70px;
+      text-align: center;
+      width: 90%;
+      font-size: 2.5em;
+    }
+  }
+}
+
+// small tablets
+@media (min-width: 481px) {
+}
+
+// portrait tablets
+@media (min-width: 641px) {
+  #main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// landscape tablets
+@media (min-width: 961px) {
+}
+
+// laptops
+@media (min-width: 1025px) {
+}
+
+// high res laptops and desktops
+@media (min-width: 1281px) {
+}
