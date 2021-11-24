@@ -3,9 +3,10 @@
 #main {
   #landing {
     margin: 0px;
-    padding-top: 100px;
+    padding-top: 10px;
     grid-column: 1 / 2;
     grid-row: 1 /2;
+    align-self: center;
     @include flex(column, center, center);
     #personalInfo {
       width: 90%;
@@ -28,6 +29,7 @@
     }
     #contactInfo {
       width: 80%;
+      margin: 20px;
       @include flex(row, space-around, flex-start);
       .contacts {
         img {
@@ -44,7 +46,6 @@
         @include flex(column, center, center);
         &:hover {
           background-color: $lightColor4;
-          color: $lightColor1;
         }
         h2 {
           margin: 0px 15px;
@@ -53,12 +54,12 @@
     }
     #about {
       width: 90%;
+      height: 250px;
       margin-top: 15px;
       padding: 10px;
       border-radius: 4px;
-      background-color: $lightColor2;
-      color: $lightColor5;
-      box-shadow: 2px 2px 1px 1px $lightColor3;
+      background-color: $lightColor5;
+      color: $lightColor1;
       @include flex(column, center, center);
       span {
         margin: 10px 0px;
@@ -69,6 +70,7 @@
         width: 80%;
         font-size: 1em;
         font-weight: bolder;
+        padding-left: 10px;
       }
     }
   }

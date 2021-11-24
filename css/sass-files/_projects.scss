@@ -17,23 +17,26 @@
         width: 90%;
         border-radius: 10px;
       }
+      .gather {
+        margin: 15px;
+      }
       .projectDescription {
         @include flex(column, center, center);
         .projectSummary {
-          height: 250px;
+          height: 350px;
           width: 90%;
           margin-top: 15px;
           padding: 10px;
           border-radius: 4px;
-          background-color: $lightColor2;
-          color: $lightColor5;
-          box-shadow: 2px 2px 1px 1px $lightColor3;
+          background-color: $lightColor5;
+          color: $lightColor1;
           @include flex(column, center, center);
           span {
             font-weight: bolder;
             font-size: 1.2em;
           }
           p {
+            padding-left: 15px;
             font-weight: bold;
             width: 80%;
           }
@@ -67,13 +70,12 @@
         }
       }
     }
-    #movieScoop {
+    #xavierOmarRedesign {
       background-color: $lightColor5;
       color: $lightColor1;
       .projectSummary {
         background-color: $lightColor1;
         color: $lightColor5;
-        box-shadow: 2px 2px 1px 1px $lightColor2;
       }
       .projectLinks {
         .liveCode {
@@ -129,7 +131,7 @@
           }
         }
       }
-      #gifactory {
+      #gather {
         .projectDescription {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
@@ -167,6 +169,16 @@
           .projectSummary {
             p {
               font-size: 1.2em;
+            }
+          }
+          .projectResponsibility {
+            p {
+              padding-left: 10px;
+            }
+          }
+          .projectTech {
+            p {
+              padding-left: 10px;
             }
           }
         }

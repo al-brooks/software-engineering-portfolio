@@ -18,6 +18,10 @@ html {
     font-family: 'Nunito', sans-serif;
     background-color: $lightColor1;
     color: $lightColor5;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto, 1fr;
+    justify-items: center;
     button {
       border: none;
       background-color: inherit;

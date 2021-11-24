@@ -17,6 +17,10 @@ html body {
   font-family: "Nunito", sans-serif;
   background-color: #ffcdb2;
   color: #6d6875;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto, 1fr;
+  justify-items: center;
 }
 html body button {
   border: none;
@@ -84,9 +88,10 @@ header #navBar button:hover {
 }
 #main #landing {
   margin: 0px;
-  padding-top: 100px;
+  padding-top: 10px;
   grid-column: 1/2;
   grid-row: 1/2;
+  align-self: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -119,6 +124,7 @@ header #navBar button:hover {
 }
 #main #landing #contactInfo {
   width: 80%;
+  margin: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -141,19 +147,18 @@ header #navBar button:hover {
 }
 #main #landing #contactInfo #resume:hover {
   background-color: #b5838d;
-  color: #ffcdb2;
 }
 #main #landing #contactInfo #resume h2 {
   margin: 0px 15px;
 }
 #main #landing #about {
   width: 90%;
+  height: 250px;
   margin-top: 15px;
   padding: 10px;
   border-radius: 4px;
-  background-color: #ffb4a2;
-  color: #6d6875;
-  box-shadow: 2px 2px 1px 1px #e5989b;
+  background-color: #6d6875;
+  color: #ffcdb2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -168,6 +173,7 @@ header #navBar button:hover {
   width: 80%;
   font-size: 1em;
   font-weight: bolder;
+  padding-left: 10px;
 }
 
 @media (min-width: 641px) {
@@ -279,6 +285,9 @@ header #navBar button:hover {
   width: 90%;
   border-radius: 10px;
 }
+#main #projects .project .gather {
+  margin: 15px;
+}
 #main #projects .project .projectDescription {
   display: flex;
   flex-direction: column;
@@ -286,14 +295,13 @@ header #navBar button:hover {
   align-items: center;
 }
 #main #projects .project .projectDescription .projectSummary {
-  height: 250px;
+  height: 350px;
   width: 90%;
   margin-top: 15px;
   padding: 10px;
   border-radius: 4px;
-  background-color: #ffb4a2;
-  color: #6d6875;
-  box-shadow: 2px 2px 1px 1px #e5989b;
+  background-color: #6d6875;
+  color: #ffcdb2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -304,6 +312,7 @@ header #navBar button:hover {
   font-size: 1.2em;
 }
 #main #projects .project .projectDescription .projectSummary p {
+  padding-left: 15px;
   font-weight: bold;
   width: 80%;
 }
@@ -338,20 +347,19 @@ header #navBar button:hover {
 #main #projects .project .projectDescription .projectLinks .linkImg {
   width: 60px;
 }
-#main #projects #movieScoop {
+#main #projects #xavierOmarRedesign {
   background-color: #6d6875;
   color: #ffcdb2;
 }
-#main #projects #movieScoop .projectSummary {
-  background-color: #ffcdb2;
-  color: #6d6875;
-  box-shadow: 2px 2px 1px 1px #ffb4a2;
-}
-#main #projects #movieScoop .projectLinks .liveCode {
+#main #projects #xavierOmarRedesign .projectSummary {
   background-color: #ffcdb2;
   color: #6d6875;
 }
-#main #projects #movieScoop .projectLinks .liveCode:hover {
+#main #projects #xavierOmarRedesign .projectLinks .liveCode {
+  background-color: #ffcdb2;
+  color: #6d6875;
+}
+#main #projects #xavierOmarRedesign .projectLinks .liveCode:hover {
   background-color: #b5838d;
   color: #ffcdb2;
 }
@@ -386,16 +394,16 @@ header #navBar button:hover {
     grid-row: 3/4;
     justify-self: center;
   }
-  #main #projects #gifactory .projectDescription {
+  #main #projects #gather .projectDescription {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr) 100px;
   }
-  #main #projects #gifactory .projectDescription .projectSummary {
+  #main #projects #gather .projectDescription .projectSummary {
     justify-self: center;
     height: 285px;
   }
-  #main #projects #gifactory .projectDescription .projectLinks {
+  #main #projects #gather .projectDescription .projectLinks {
     grid-column: 1/3;
     grid-row: 3/4;
     justify-self: center;
@@ -412,6 +420,12 @@ header #navBar button:hover {
   }
   #main #projects .project .projectDescription .projectSummary p {
     font-size: 1.2em;
+  }
+  #main #projects .project .projectDescription .projectResponsibility p {
+    padding-left: 10px;
+  }
+  #main #projects .project .projectDescription .projectTech p {
+    padding-left: 10px;
   }
 }
 
